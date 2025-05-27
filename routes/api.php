@@ -4,8 +4,10 @@ require_once __DIR__ . '/../models/Usuario.php';
 require_once __DIR__ . '/../models/vendedor.php';
 
 $db        = new Database();
-$usuario   = new Usuario($db->conn);
-$vendedor  = new Vendedor($db->conn);
+$conn      = $db->getConnection(); // ✅ obtener conexión usando el método público
+$usuario   = new Usuario($conn);
+$vendedor  = new Vendedor($conn);
+
 
 header("Content-Type: application/json");
 
