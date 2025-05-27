@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../config/db.php';
-require_once __DIR__ . '/../models/Vendedor.php';
+require_once __DIR__ . '/../models/vendedor.php';
 
 $db = new Database();
 $vendedor = new Vendedor($db->conn);
